@@ -6,8 +6,8 @@
 			<img src="https://i.imgur.com/dYcYQ7E.png" class="w-full" />
 			{{ $portrait := .Resources.GetMatch "portrait" }}
 			{{ with $portrait }}
-			<div class="flex justify-center -mt-8">
-				<img src="{{ (.Fill "400x400").RelPermalink }}" width="100px" height="100px" class="rounded-full border-solid border-white border-2 -mt-3">		
+			<div class="flex justify-center">
+				<img src="{{ (.Fill "400x400").RelPermalink }}" class="rounded-full border-solid border-white border-2 -mt-10 w-20 h-20">		
 			</div>
 			{{ end}}
 			<div class="p-2">
