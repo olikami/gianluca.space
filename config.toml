@@ -7,7 +7,6 @@ theme = "business-card"
 defaultContentLanguage = "de-ch"
 
 enableRobotsTXT = true
-relativeURLs = true
 
 environment = "production"
 removePathAccents=true
