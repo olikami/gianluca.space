@@ -3,6 +3,12 @@ module.exports = {
   	require('tailwindcss'),
     require('@fullhuman/postcss-purgecss')({
     	content: ['./**/*.html',],
+        extractors: [
+            {
+                extractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+                extensions: ['html', 'js'],
+            },
+        ],
         keyframe: true
     }),
     require('autoprefixer')({
@@ -13,7 +19,7 @@ module.exports = {
 		]
     }),
     require('cssnano')({
-            preset: 'default',
+        preset: 'default',
     }),
   ]
 }
