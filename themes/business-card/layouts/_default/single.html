@@ -20,13 +20,13 @@
 						{{ .Page.Content }}
 					</div>
 				</div>
-	  			<div class="flex justify-center pb-3 text-grey-dark">
-	     			<div class="text-center mr-3 border-r pr-3">
-	        			<h2>Phone</h2>
+	  			<div class="flex flex-col sm:flex-row justify-center pb-3 text-grey-dark">
+	     			<div class="text-center mb-1 border-b pb-1 sm:mb-0 sm:border-b-0 sm:pb-0 sm:mr-3 sm:border-r sm:pr-3">
+	        			<h2>{{ T "phone" }}</h2>
 	        			<a class="font-light text-sm text-current" href="tel:{{ replace .Page.Params.phone " " "" }}">{{ .Page.Params.phone }}</a>
 	      			</div>
 	     			 <div class="text-center">
-	        			<h2>E-Mail</h2>
+	        			<h2>{{ T "email" }}</h2>
 	        			<a class="font-light text-sm text-current" href="mailto:{{  .Page.Params.email }}">{{ .Page.Params.email }}</a>
 	      			</div>
 	  			</div>
