@@ -12,6 +12,8 @@ aliases:
 resources:
 - name: portrait
   src: wombat.jpg
+- name: background
+  src: Patria_Schnuppern.jpg
 ---
 
 Aktuell Abteilungsleiter bei [Pfadipatria](https://www.pfadipatria.ch/). Produziert einen [Podcast für die Pfadi](https://ohre.pfadipatria.ch).

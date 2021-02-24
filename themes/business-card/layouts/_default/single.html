@@ -2,12 +2,15 @@
 
 <div class="flex h-screen">
 	<div class="m-auto p-4">
-		<div class="rounded rounded-t-lg overflow-hidden shadow max-w-md my-1 bg-white">
-			<img src="https://i.imgur.com/dYcYQ7E.png" class="w-full" />
+		<div class="rounded-lg overflow-hidden shadow max-w-md my-1 bg-white overflow-visible">
+			{{ $background := .Resources.GetMatch "background" }}
+			{{ with $background }}
+			<img src="{{ (.Fill "960x384").RelPermalink }}" class="rounded-t-lg w-full max-h-48 object-cover">
+			{{ end }}
 			{{ $portrait := .Resources.GetMatch "portrait" }}
 			{{ with $portrait }}
 			<div class="flex justify-center">
-				<img src="{{ (.Fill "400x400").RelPermalink }}" class="rounded-full border-solid border-white border-2 -mt-10 w-20 h-20">		
+				<img src="{{ (.Fill "192x192").RelPermalink }}" class="rounded-full border-solid border-white border-2 -mt-12 w-24 h-24">		
 			</div>
 			{{ end}}
 			<div class="p-2">
