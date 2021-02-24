@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<div class="flex h-screen">
+	<div class="m-auto">
+		<div class="rounded rounded-t-lg overflow-hidden shadow max-w-md my-1 bg-white">
+			<img src="https://i.imgur.com/dYcYQ7E.png" class="w-full" />
+			<div class="flex justify-center -mt-8">
+				<img src="https://i.imgur.com/8Km9tLL.jpg" class="rounded-full border-solid border-white border-2 -mt-3">		
+			</div>
+			<div class="p-2">
+				<div class="text-center px-3 pb-6 pt-2">
+					<h3 class="text-black text-xl bold font-sans">{{ .Page.Title }}</h3>
+					<div class="mt-2 font-sans font-light text-grey-dark">
+						{{ .Page.Content }}
+					</div>
+				</div>
+	  			<div class="flex justify-center pb-3 text-grey-dark">
+	     			<div class="text-center mr-3 border-r pr-3">
+	        			<h2>Phone</h2>
+	        			<a class="font-light text-sm text-current" href="tel:{{ replace .Page.Params.phone " " "" }}">{{ .Page.Params.phone }}</a>
+	      			</div>
+	     			 <div class="text-center">
+	        			<h2>E-Mail</h2>
+	        			<a class="font-light text-sm text-current" href="mailto:{{  .Page.Params.email }}">{{ .Page.Params.email }}</a>
+	      			</div>
+	  			</div>
+	  		</div>
+		</div>
+	</div>
+</div>
+
+{{ end }}

@@ -1,0 +1,20 @@
+baseURL = "https://oli.fyi/"
+languageCode = "de-ch"
+title = "Oliver Kamer"
+
+theme = "business-card"
+
+defaultContentLanguage = "de-ch"
+
+enableRobotsTXT = true
+
+environment = "production"
+removePathAccents=true
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[languages]
+	[languages.de-ch]
+    	weight = 1
+  	[languages.en]
+  		weight = 2
