@@ -11,6 +11,6 @@ resources:
   src: Grindelwald.jpg
 ---
 
-Meine Freunde nennen mich Oli
+Meine Freunde nennen mich Oli.
 
 Ich studiere aktuell Informatik an der Universität Zürich.
