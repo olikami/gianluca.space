@@ -4,9 +4,12 @@
 	<div class="m-auto p-4">
 		<div class="rounded rounded-t-lg overflow-hidden shadow max-w-md my-1 bg-white">
 			<img src="https://i.imgur.com/dYcYQ7E.png" class="w-full" />
+			{{ $portrait := .Resources.GetMatch "portrait" }}
+			{{ with $portrait }}
 			<div class="flex justify-center -mt-8">
-				<img src="https://i.imgur.com/8Km9tLL.jpg" class="rounded-full border-solid border-white border-2 -mt-3">		
+				<img src="{{ (.Fill "400x400").RelPermalink }}" width="100px" height="100px" class="rounded-full border-solid border-white border-2 -mt-3">		
 			</div>
+			{{ end}}
 			<div class="p-2">
 				<div class="text-center px-3 pb-6 pt-2">
 					<h3 class="text-black text-xl bold font-sans">{{ .Page.Title }}</h3>

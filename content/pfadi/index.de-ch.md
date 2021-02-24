@@ -9,6 +9,9 @@ aliases:
     - /patria/
     - /pfadfinder/
     - /wombat/
+resources:
+- name: portrait
+  src: wombat.jpg
 ---
 
 Aktuell Abteilungsleiter bei [Pfadipatria](https://www.pfadipatria.ch/). Produziert einen [Podcast für die Pfadi](https://ohre.pfadipatria.ch).

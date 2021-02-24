@@ -13,6 +13,10 @@ removePathAccents=true
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+[imaging]
+	resampleFilter = "lanczos"
+	quality = 85
+
 [languages]
 	[languages.de-ch]
     	weight = 1
