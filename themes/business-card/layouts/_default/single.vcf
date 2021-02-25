@@ -6,8 +6,8 @@ FN:{{ .Page.Title }}
 ORG:{{ . }}
 {{ end -}}
 {{- $portrait := .Resources.GetMatch "portrait" -}}
-{{- with $portrait -}}
-PHOTO;MEDIATYPE=image/jpeg:{{ (.Fill "512x512").Permalink }}
+{{ with $portrait }}
+PHOTO;ENCODING=b;TYPE=JPEG:{{ (.Fill "512x512").Content | base64Encode }}
 {{- end }}
 {{- with .Page.Params.phone }}
 TEL;type=CELL;type=VOICE;type=pref:{{ . }}
