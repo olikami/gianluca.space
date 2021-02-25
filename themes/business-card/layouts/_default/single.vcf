@@ -2,9 +2,12 @@ BEGIN:VCARD
 VERSION:4.0
 N:{{ .Page.Params.lastname }};{{ .Page.Params.firstname }};;;
 FN:{{ .Page.Title }}
-{{- with .Page.Params.organization }}
-ORG:{{ . }}
+{{- if not (in .Page.Title .Page.Params.firstname) }}
+NICKNAME:{{ .Page.Title }}
 {{ end -}}
+{{ with .Page.Params.organization -}}
+ORG:{{ . }}
+{{- end }}
 {{- $portrait := .Resources.GetMatch "portrait" -}}
 {{ with $portrait }}
 PHOTO;ENCODING=b;TYPE=JPEG:{{ (.Fill "512x512").Content | base64Encode }}
