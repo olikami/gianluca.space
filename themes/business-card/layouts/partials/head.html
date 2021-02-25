@@ -52,7 +52,8 @@
 {{ end }}
 
 <!-- Icons -->
-{{ $portrait := .Resources.GetMatch "{*icon*,*portrait*}" }}
+{{ $portrait := .Resources.GetMatch "*icon*" }}
+{{ if not $portrait }}{{ $portrait = .Resources.GetMatch "*portrait*" }}{{ end }}
 {{ with $portrait }}
 <link rel="apple-touch-icon" sizes="60x60" href="{{ (.Fill "60x60 png").RelPermalink }}"/>
 <link rel="apple-touch-icon" sizes="76x76" href="{{ (.Fill "76x76 png").RelPermalink }}"/>

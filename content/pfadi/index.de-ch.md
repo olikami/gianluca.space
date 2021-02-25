@@ -20,6 +20,8 @@ aliases:
     - /pfadfinder/
     - /wombat/
 resources:
+- name: icon
+  src: wombat_face.png
 - name: portrait
   src: wombat.jpg
 - name: background
