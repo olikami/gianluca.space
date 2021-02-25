@@ -23,6 +23,12 @@
 }
 </script>
 
+<!-- Opengraph -->
+{{ partial "opengraph.html" . }}
+
+<!-- Twitter Card -->
+{{ partial "twittercard.html" . }}
+
 <!-- Tailwind styles -->
 {{ $css := resources.Get "tailwind.css" }}
 
