@@ -5,6 +5,9 @@ phone: "+41 79 884 10 62"
 email: "oliver@kamer.ch"
 author: "Oliver Kamer"
 layout: single
+outputs:
+- html
+- vcf
 resources:
 - name: portrait
   src: Norway_Fjord.JPG

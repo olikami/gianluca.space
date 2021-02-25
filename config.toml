@@ -22,3 +22,14 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     	weight = 1
   	[languages.en]
   		weight = 2
+
+[mediaTypes]
+	[mediaTypes."text/vcard"]
+		suffixes = ["vcf"]
+
+[outputFormats]
+  [outputFormats.vcf]
+    baseName = "contact"
+    isPlainText = true
+    mediaType = "text/vcard"
+    protocol = "https://"

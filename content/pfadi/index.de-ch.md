@@ -1,10 +1,16 @@
 ---
 title: "Wombat"
 date: 2020-02-24T12:34:32+01:00
+firstname: "Oliver"
+lastname: "Kamer"
+organization: "Pfadicorps Patria"
 phone: "+41 79 884 10 62"
 email: "wombat@pfadipatria.ch"
 author: "Wombat"
 layout: single
+outputs:
+- html
+- vcf
 aliases:
     - /pfadi/
     - /patria/
