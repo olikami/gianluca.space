@@ -1,3 +1,5 @@
 <div class="text-center text-xs py-2">
-	&copy; {{ now.Format "2006"}} {{ with .Page.Params.author }}{{ . }}{{ end }}
+	<p>
+		&copy; {{ now.Format "2006"}} {{ with .Page.Params.author }}{{ . }}{{ end }}
+	</p>
 </div>

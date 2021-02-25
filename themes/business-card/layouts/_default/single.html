@@ -60,19 +60,15 @@
 	  			<div class="flex flex-col sm:flex-row justify-center pb-3 text-grey-dark mx-auto w-max">
 	     			<div class="text-center mb-1 border-b pb-1 px-6 sm:px-0 sm:mb-0 sm:border-b-0 sm:pb-0 sm:mr-3 sm:border-r sm:pr-3">
 	        			<h2>{{ T "phone" }}</h2>
-	        			<p>
-		        			<a class="font-light text-sm text-current" href="tel:{{ replace .Page.Params.phone " " "" }}">
-		        				{{ .Page.Params.phone }}
-	        				</a>
-	        			</p>
+	        			<a class="font-light text-sm text-current" href="tel:{{ replace .Page.Params.phone " " "" }}">
+	        				{{ .Page.Params.phone }}
+        				</a>
 	      			</div>
 	     			 <div class="text-center">
 	        			<h2>{{ T "email" }}</h2>
-	        			<p>
-		        			<a class="font-light text-sm text-current" href="mailto:{{  .Page.Params.email }}">
-		        				{{ .Page.Params.email }}
-		        			</a>
-		        		</p>
+	        			<a class="font-light text-sm text-current" href="mailto:{{  .Page.Params.email }}">
+	        				{{ .Page.Params.email }}
+	        			</a>
 	      			</div>
 	  			</div>
 	  		</div>
