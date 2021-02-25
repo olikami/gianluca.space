@@ -9,6 +9,8 @@ outputs:
 - html
 - vcf
 resources:
+- name: icon
+  src: oli_face.png
 - name: portrait
   src: Norway_Fjord.JPG
 - name: background
