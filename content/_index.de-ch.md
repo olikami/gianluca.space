@@ -13,4 +13,4 @@ resources:
 
 Meine Freunde nennen mich Oli.
 
-Ich studiere aktuell Informatik an der Universität Zürich.
+Aktuell studiere ich Informatik an der Universität Zürich.
