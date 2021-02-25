@@ -9,7 +9,12 @@ module.exports = {
                 extensions: ['html', 'js'],
             },
         ],
-        preserveHtmlElements: true,
+        whitelist: [
+            'html', 'body', 
+            'div', 'span',
+            'p',
+            'img',
+        ],
         keyframe: true
     }),
     require('autoprefixer')({
