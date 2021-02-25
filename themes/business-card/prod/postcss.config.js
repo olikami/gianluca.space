@@ -6,14 +6,8 @@ module.exports = {
         extractors: [
             {
                 extractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
-                extensions: ['html', 'js'],
+                extensions: ['html'],
             },
-        ],
-        whitelist: [
-            'html', 'body', 
-            'div', 'span',
-            'p',
-            'img',
         ],
         keyframe: true
     }),
