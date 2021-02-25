@@ -6,6 +6,7 @@ firstname: "Oliver"
 lastname: "Kamer"
 phone: "+41 79 884 10 62"
 email: "oliver@kamer.ch"
+birthday: 1997-05-19
 layout: single
 outputs:
 - html

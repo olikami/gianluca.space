@@ -15,5 +15,8 @@ TEL;VALUE=uri;PREF=1;TYPE="voice,home":tel:{{ . }}
 {{- with .Page.Params.email }}
 EMAIL:{{ . }}
 {{ end -}}
+{{- with .Page.Params.birthday -}}
+BDAY:{{ dateFormat "20060102" . }}
+{{ end -}}
 REV:{{ now.Format "20060102T150405Z" }}
 END:VCARD
