@@ -5,12 +5,41 @@
 		<div class="rounded-lg overflow-hidden shadow max-w-md my-1 bg-white dark:bg-black text-black dark:text-white overflow-visible shadow-lg">
 			{{ $background := .Resources.GetMatch "background" }}
 			{{ with $background }}
-			<img src="{{ (.Fill "960x384").RelPermalink }}" class="rounded-t-lg w-full max-h-48 object-cover">
+			<noscript>
+				<img src="{{ (.Fill "480x192").RelPermalink }}" class="rounded-t-lg w-full max-h-48 object-cover">
+			</noscript>
+			<img
+				data-sizes="auto"
+    			src="data:image/jpeg;base64,{{ (.Fill "120x48").Content | base64Encode }}"
+				data-srcset="
+    			{{ (.Fill "320x128").RelPermalink }} 320w,
+    			{{ (.Fill "480x192").RelPermalink }} 480w,
+    			{{ (.Fill "960x384").RelPermalink }} 960w
+    			"
+    			class="rounded-t-lg w-full max-h-48 object-cover lazyload"
+    		>
 			{{ end }}
 			{{ $portrait := .Resources.GetMatch "portrait" }}
 			{{ with $portrait }}
 			<div class="flex justify-center">
-				<img src="{{ (.Fill "192x192").RelPermalink }}" class="rounded-full border-solid border-white dark:border-gray-900 border-2 -mt-12 w-24 h-24">		
+				<noscript>
+					<img
+						src="{{ (.Fill "192x192").RelPermalink }}"
+						class="rounded-full border-solid border-white dark:border-gray-900 border-2 -mt-12 w-24 h-24"
+					>
+				</noscript>
+				<img
+					data-sizes="auto"
+	    			src="data:image/jpeg;base64,{{ (.Fill "48x48").Content | base64Encode }}"
+					data-srcset="
+	    			{{ (.Fill "64x64").RelPermalink }} 64w,
+	    			{{ (.Fill "96x96").RelPermalink }} 96w,
+	    			{{ (.Fill "128x128").RelPermalink }} 128w,
+	    			{{ (.Fill "192x192").RelPermalink }} 192w,
+	    			{{ (.Fill "256x256").RelPermalink }} 256w,
+	    			"
+	    			class="rounded-full border-solid border-white dark:border-gray-900 border-2 -mt-12 w-24 h-24 lazyload"
+	    		>		
 			</div>
 			{{ end }}
 			<div class="p-2">

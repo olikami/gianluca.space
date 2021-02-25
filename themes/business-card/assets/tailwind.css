@@ -7,3 +7,7 @@
   	@apply text-blue-500 hover:underline;
   }
 }
+
+.no-js img.lazyload {
+    display: none;
+}

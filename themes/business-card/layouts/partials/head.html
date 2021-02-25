@@ -25,7 +25,6 @@
 
 <!-- Tailwind styles -->
 {{ $css := resources.Get "tailwind.css" }}
-{{ $style := $css | resources.PostCSS }}
 
 {{ if hugo.IsProduction }}
 {{ $style := $css | resources.PostCSS (dict "config" "prod/postcss.config.js") | fingerprint }}
@@ -33,4 +32,15 @@
 {{ else }}
 {{ $style := $css | resources.PostCSS (dict "config" "dev/postcss.config.js") | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
+
+<!-- Lazysizes -->
+{{ $lazysizes := resources.Get "lazysizes.js" }}
+
+{{ if hugo.IsProduction }}
+{{ $lazysizes := $lazysizes | minify | fingerprint }}
+<script src="{{ $lazysizes.RelPermalink }}" integrity="{{ $lazysizes.Data.Integrity }}"></script>
+{{ else }}
+{{ $lazysizes := $lazysizes | fingerprint }}
+<script src="{{ $lazysizes.RelPermalink }}"></script>
 {{ end }}
