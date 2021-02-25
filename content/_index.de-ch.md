@@ -9,7 +9,7 @@ email: "oliver@kamer.ch"
 birthday: 1997-05-19
 menu:
   main:
-    title: "Persönlich"
+    title: "Privat"
 layout: single
 outputs:
 - html
