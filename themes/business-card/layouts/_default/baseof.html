@@ -3,9 +3,10 @@
     {{- partial "head.html" . -}}
     <body class="bg-grey-100 dark:bg-grey-900">
         {{- partial "header.html" . -}}
-        <div id="content">
+     	<div class="flex flex-col h-screen">
         {{- block "main" . }}{{- end }}
-        </div>
+
         {{- partial "footer.html" . -}}
+        </div>
     </body>
 </html>
