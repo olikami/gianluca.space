@@ -7,6 +7,9 @@ organization: "Pfadicorps Patria"
 phone: "+41 79 884 10 62"
 email: "wombat@pfadipatria.ch"
 author: "Wombat"
+menu:
+  main:
+    title: "Pfadi"
 layout: single
 outputs:
 - html

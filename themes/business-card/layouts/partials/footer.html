@@ -1,5 +1,20 @@
-<div class="text-center text-xs py-2">
+<div class="text-center absolute bottom-2 left-2 pl-2 text-xs py-2">
 	<p>
 		&copy; {{ now.Format "2006"}} {{ with .Page.Params.author }}{{ . }}{{ end }}
 	</p>
+</div>
+<div class="text-xs absolute bottom-2 right-2">
+	{{ if gt (len .Page.AllTranslations) 1 }}
+		<div class="flex m-2">
+			{{ range .Page.AllTranslations }}
+            <a class="text-current justify-center px-2"
+		        href="{{ .Permalink }}"
+        	>
+                <div class="leading-5">
+                    {{ .Language.LanguageName }}
+                </div>
+            </a>
+            {{ end }}
+        </div>
+	{{ end }}
 </div>

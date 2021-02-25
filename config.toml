@@ -19,9 +19,11 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [languages]
 	[languages.de-ch]
-    	weight = 1
-  	[languages.en]
-  		weight = 2
+    languageName = "Deutsch"
+    weight = 1
+	[languages.en]
+    languageName = "English"
+		weight = 2
 
 [mediaTypes]
 	[mediaTypes."text/vcard"]
