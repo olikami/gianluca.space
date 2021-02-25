@@ -20,9 +20,11 @@
 				data-sizes="auto"
     			src="data:image/jpeg;base64,{{ (.Fill "120x48").Content | base64Encode }}"
 				data-srcset="
+				{{ (.Fill "240x96").RelPermalink }} 240w,
     			{{ (.Fill "320x128").RelPermalink }} 320w,
     			{{ (.Fill "480x192").RelPermalink }} 480w,
     			{{ (.Fill "640x256").RelPermalink }} 640w,
+    			{{ (.Fill "720x288").RelPermalink }} 720w,
     			{{ (.Fill "960x384").RelPermalink }} 960w
     			"
     			class="rounded-t-lg w-full max-h-48 object-cover lazyload"
@@ -39,8 +41,9 @@
 				</noscript>
 				<img
 					data-sizes="auto"
-	    			src="data:image/jpeg;base64,{{ (.Fill "48x48").Content | base64Encode }}"
+	    			src="data:image/jpeg;base64,{{ (.Fill "24x24").Content | base64Encode }}"
 					data-srcset="
+					{{ (.Fill "48x48").RelPermalink }} 48w,
 	    			{{ (.Fill "64x64").RelPermalink }} 64w,
 	    			{{ (.Fill "96x96").RelPermalink }} 96w,
 	    			{{ (.Fill "128x128").RelPermalink }} 128w,
