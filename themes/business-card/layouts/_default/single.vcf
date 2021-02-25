@@ -10,7 +10,7 @@ ORG:{{ . }}
 PHOTO;MEDIATYPE=image/jpeg:{{ (.Fill "512x512").Permalink }}
 {{- end }}
 {{- with .Page.Params.phone }}
-TEL;VALUE=uri;PREF=1;TYPE="voice,home":tel:{{ . }}
+TEL;type=CELL;type=VOICE;type=pref:{{ . }}
 {{- end }}
 {{- with .Page.Params.email }}
 EMAIL:{{ . }}
