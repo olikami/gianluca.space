@@ -35,6 +35,3 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     isPlainText = true
     mediaType = "text/vcard"
     protocol = "https://"
-
-[minify]
-  disableSVG = true
