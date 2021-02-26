@@ -26,7 +26,7 @@ resources:
 - name: portrait
   src: wombat.jpg
 - name: background
-  src: Patria_Schnuppern.jpg
+  src: SoLa_2020_tents.jpg
 ---
 
 Aktuell Abteilungsleiter bei [Pfadipatria](https://www.pfadipatria.ch/). Produziert einen [Podcast für die Pfadi](https://ohre.pfadipatria.ch).
