@@ -19,4 +19,4 @@ resources:
 ---
 Please call me Oli.
 
-Currently studing computer science at UZH.
+Currently studying computer science at UZH.
