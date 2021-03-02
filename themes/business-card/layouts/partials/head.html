@@ -7,19 +7,19 @@
 <script type="application/ld+json">
 {
 	"@context": "https://schema.org",
-  	"@type": "Person",
-  	{{- with .Page.Params.email }}
-  	"email": "mailto:{{ . }}",
-  	{{ end -}}
-  	{{- $portrait := .Resources.GetMatch "portrait" -}}
-  	{{- with $portrait }}
-  	"image": "{{ (.Fill "256x256").Permalink }}",
-    {{ end -}}
-  	"name": "{{ .Page.Title }}",
-  	{{- with .Page.Params.phone }}
-  	"telephone": "{{ . }}",
-  	{{ end -}}
-  	"url": "{{ .Page.Permalink }}"
+	"@type": "Person",
+	{{- with .Page.Params.email }}
+	"email": "mailto:{{ . }}",
+	{{ end -}}
+	{{- $portrait := .Resources.GetMatch "portrait" -}}
+	{{- with $portrait }}
+	"image": "{{ (.Fill "256x256").Permalink }}",
+	{{ end -}}
+	"name": "{{ .Page.Title }}",
+	{{- with .Page.Params.phone }}
+	"telephone": "{{ . }}",
+	{{ end -}}
+	"url": "{{ .Page.Permalink }}"
 }
 </script>
 
