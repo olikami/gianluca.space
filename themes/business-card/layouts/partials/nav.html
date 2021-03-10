@@ -2,11 +2,11 @@
 <div class="menu left">
 	<div class="list">
 		{{- $currentPage := . -}}
-		{{- range .Site.Menus.main -}}
+		{{- range .Site.Menus.main }}
 		<a class="item {{ if ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}" href="{{.URL }}">
 			{{ .Title }}
 		</a>
-		{{- end -}}
+		{{- end }}
 	</div>
 </div>
 {{ end }}
@@ -15,11 +15,11 @@
 	{{ if gt (len .Page.AllTranslations) 1 }}
 		<div class="list">
 			{{- $currentLangague := .Site.Language -}}
-			{{- range .Page.AllTranslations -}}
+			{{- range .Page.AllTranslations }}
 			<a class="item{{ if eq $currentLangague.Lang .Lang }} active{{ end }}" href="{{ .Permalink }}">
 				{{ .Language.LanguageName }}
 			</a>
-			{{- end -}}
+			{{- end }}
 		</div>
 	{{ end }}
 </div>
