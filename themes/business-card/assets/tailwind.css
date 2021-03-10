@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @layer base {
+
+	/* Base stuff */
 	a {
 		@apply text-blue-500 hover:underline;
 	}
@@ -11,8 +13,36 @@
 		@apply bg-grey-100 dark:bg-grey-900;
 	}
 
+	/* Card */
+
 	.card {
 		@apply rounded-lg overflow-hidden shadow max-w-lg my-1 bg-white dark:bg-black text-black dark:text-white overflow-visible shadow-lg relative;
+	}
+
+	/* Menu */
+
+	.menu {
+		@apply text-xs absolute top-2 dark:text-white
+	}
+
+	.menu.left {
+		@apply left-2;
+	}
+
+	.menu.right {
+		@apply right-2;
+	}
+
+	.menu .list {
+		@apply flex m-2;
+	}
+
+	.menu .list .item {
+		@apply leading-5 text-current justify-center px-2;
+	}
+
+	.menu .list .item.active {
+		@apply font-bold;
 	}
 }
 

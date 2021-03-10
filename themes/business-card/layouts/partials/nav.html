@@ -1,27 +1,23 @@
 {{ if or (eq .Page.Title "Wombat" ) (eq .Page.Title "Oliver Kamer" )}}
-<div class="text-xs absolute top-2 left-2 dark:text-white">
-	<div class="flex m-2">
+<div class="menu left">
+	<div class="list">
 		{{- $currentPage := . -}}
 		{{- range .Site.Menus.main -}}
-		<a class="text-current{{ if ($currentPage.IsMenuCurrent "main" .) }} font-bold{{ end }} justify-center px-2"href="{{.URL }}">
-			<div class="leading-5">
-				{{ .Title }}
-			</div>
+		<a class="item {{ if ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"href="{{.URL }}">
+			{{ .Title }}
 		</a>
 		{{- end -}}
 	</div>
 </div>
 {{ end }}
 
-<div class="text-xs absolute top-2 right-2 dark:text-white">
+<div class="menu right">
 	{{ if gt (len .Page.AllTranslations) 1 }}
-		<div class="flex m-2">
+		<div class="list">
 			{{- $currentLangague := .Site.Language -}}
 			{{- range .Page.AllTranslations -}}
-			<a class="text-current{{ if eq $currentLangague.Lang .Lang }} font-bold{{ end }} justify-center px-2" href="{{ .Permalink }}">
-				<div class="leading-5">
-					{{ .Language.LanguageName }}
-				</div>
+			<a class="item{{ if eq $currentLangague.Lang .Lang }} active{{ end }}" href="{{ .Permalink }}">
+				{{ .Language.LanguageName }}
 			</a>
 			{{- end -}}
 		</div>
