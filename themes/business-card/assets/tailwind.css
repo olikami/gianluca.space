@@ -3,16 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-  a {
-  	@apply text-blue-500 hover:underline;
-  }
+	a {
+		@apply text-blue-500 hover:underline;
+	}
 
-  body {
-  	@apply bg-grey-100 dark:bg-grey-900;
-  }
+	body {
+		@apply bg-grey-100 dark:bg-grey-900;
+	}
+
+	.card {
+		@apply rounded-lg overflow-hidden shadow max-w-lg my-1 bg-white dark:bg-black text-black dark:text-white overflow-visible shadow-lg relative;
+	}
 }
 
 /* Don't display lazyload images on no-js */
 .no-js img.lazyload {
-    display: none;
-} 
+	display: none;
+}
