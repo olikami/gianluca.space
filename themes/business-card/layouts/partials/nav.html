@@ -3,7 +3,7 @@
 	<div class="list">
 		{{- $currentPage := . -}}
 		{{- range .Site.Menus.main }}
-		<a class="item {{ if ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}" href="{{.URL }}">
+		<a class="item {{- if ($currentPage.IsMenuCurrent "main" .) }} active {{- end }}" href="{{.URL }}">
 			{{ .Title }}
 		</a>
 		{{- end }}
@@ -16,7 +16,7 @@
 		<div class="list">
 			{{- $currentLangague := .Site.Language -}}
 			{{- range .Page.AllTranslations }}
-			<a class="item{{ if eq $currentLangague.Lang .Lang }} active{{ end }}" href="{{ .Permalink }}">
+			<a class="item {{- if eq $currentLangague.Lang .Lang }} active {{- end }}" href="{{ .Permalink }}">
 				{{ .Language.LanguageName }}
 			</a>
 			{{- end }}
