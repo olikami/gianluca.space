@@ -85,10 +85,10 @@
 
 			.item {
 				@apply leading-5 text-current justify-center px-2;
-			}
 
-			&.active {
-				@apply font-bold;
+				&.active {
+					@apply font-bold;
+				}
 			}
 		}
 	}
