@@ -13,7 +13,7 @@
 			{{ $background := .Resources.GetMatch "background" }}
 			{{ with $background }}
 			<noscript>
-				<img src="{{ (.Fill "480x192").RelPermalink }}" class="rounded-t-lg w-full max-h-48 object-cover">
+				<img src="{{ (.Fill "480x192").RelPermalink }}" class="cover-img">
 			</noscript>
 			<img
 				data-sizes="auto"
@@ -23,7 +23,7 @@
 				{{- range (slice 4 8 16 24 32 48) -}}
 				{{ ( ( printf "%dx%d" (mul . 30) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 30 }}w,
 				{{- end -}}"
-				class="rounded-t-lg w-full max-h-48 object-cover lazyload"
+				class="cover-img lazyload"
 			>
 			{{ end }}
 			{{ $portrait := .Resources.GetMatch "portrait" }}
@@ -32,7 +32,7 @@
 				<noscript>
 					<img
 						src="{{ (.Fill "192x192").RelPermalink }}"
-						class="rounded-full border-solid border-white dark:border-gray-900 border-2 -mt-16 w-32 h-32"
+						class="portrait-img"
 					>
 				</noscript>
 				<img
@@ -43,7 +43,7 @@
 					{{- range (slice 4 8 12 16 24 32 48) -}}
 					{{ ( ( printf "%dx%d" (mul . 12) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 12 }}w,
 					{{- end -}}"
-					class="rounded-full border-solid border-white dark:border-gray-900 border-2 -mt-16 w-32 h-32 lazyload"
+					class="portrait-img lazyload"
 				>		
 			</div>
 			{{ end }}
