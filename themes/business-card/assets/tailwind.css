@@ -35,7 +35,7 @@
 		@apply text-xl font-sans;
 	}
 
-	.content .content {
+	.content .inner {
 		@apply mt-2 font-sans font-light;
 	}
 
@@ -89,6 +89,15 @@
 
 	.menu .list .item.active {
 		@apply font-bold;
+	}
+
+	/* Footer */
+	footer {
+		@apply absolute bottom-2 w-full dark:text-white;
+	}
+
+	footer p {
+		@apply text-xs p-2 text-center;
 	}
 }
 
