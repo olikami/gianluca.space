@@ -6,9 +6,13 @@
   a {
   	@apply text-blue-500 hover:underline;
   }
+
+  body {
+  	@apply bg-grey-100 dark:bg-grey-900;
+  }
 }
 
 /* Don't display lazyload images on no-js */
 .no-js img.lazyload {
     display: none;
-}
+} 
