@@ -33,7 +33,7 @@
 {{ $scss := resources.Get "tailwind.scss" }}
 
 {{ if hugo.IsProduction }}
-{{ $style := $scss | resources.ToCSS | resources.PostCSS (dict "config" "prod/postcss.config.js") | fingerprint }}
+{{ $style := $scss | resources.ToCSS | resources.PostCSS (dict "config" "prod/postcss.config.js") | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ else }}
 {{ $style := $scss | resources.ToCSS | resources.PostCSS (dict "config" "dev/postcss.config.js") | fingerprint }}
