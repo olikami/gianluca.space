@@ -32,6 +32,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 [outputFormats]
   [outputFormats.vcf]
     baseName = "contact"
+    path = "vcard"
     isPlainText = true
     mediaType = "text/vcard"
     protocol = "https://"
