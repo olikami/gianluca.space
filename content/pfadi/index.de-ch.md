@@ -16,7 +16,6 @@ outputs:
 - html
 - vcf
 aliases:
-    - /pfadi/
     - /patria/
     - /pfadfinder/
     - /wombat/
