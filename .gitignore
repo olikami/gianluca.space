@@ -162,3 +162,4 @@ GitHub.sublime-settings
 # End of https://www.toptal.com/developers/gitignore/api/hugo,sublimetext,node
 
 .DS_Store
+.hugo_build.lock
