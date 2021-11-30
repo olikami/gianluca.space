@@ -64,5 +64,11 @@
 <link rel="icon" type="image/png" sizes="16x16" href="{{ (.Fill "16x16 png").Permalink }}"/>
 {{ end -}}
 
+<!-- Preconnect to external domains from menu -->
+{{- range .Site.Menus.main }}
+{{ $url := urls.Parse (.URL | absLangURL) }}
+<link rel="preconnect" href="{{ $url.Scheme }}://{{ $url.Host }}">
+{{- end }}
+
 <!-- Hugo generator tag -->
 {{ hugo.Generator }}
