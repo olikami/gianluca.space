@@ -55,13 +55,13 @@
 {{ $portrait := .Resources.GetMatch "*icon*" }}
 {{ if not $portrait }}{{ $portrait = .Resources.GetMatch "*portrait*" }}{{ end }}
 {{ with $portrait }}
-<link rel="apple-touch-icon" sizes="60x60" href="{{ (.Fill "60x60 png").RelPermalink }}"/>
-<link rel="apple-touch-icon" sizes="76x76" href="{{ (.Fill "76x76 png").RelPermalink }}"/>
-<link rel="apple-touch-icon" sizes="120x120" href="{{ (.Fill "120x120 png").RelPermalink }}"/>
-<link rel="apple-touch-icon" sizes="152x152" href="{{ (.Fill "152x152 png").RelPermalink }}"/>
-<link rel="apple-touch-icon" sizes="180x180" href="{{ (.Fill "180x180 png").RelPermalink }}"/>
-<link rel="icon" type="image/png" sizes="32x32" href="{{ (.Fill "32x32 png").RelPermalink }}"/>
-<link rel="icon" type="image/png" sizes="16x16" href="{{ (.Fill "16x16 png").RelPermalink }}"/>
+<link rel="apple-touch-icon" sizes="60x60" href="{{ (.Fill "60x60 png").Permalink }}"/>
+<link rel="apple-touch-icon" sizes="76x76" href="{{ (.Fill "76x76 png").Permalink }}"/>
+<link rel="apple-touch-icon" sizes="120x120" href="{{ (.Fill "120x120 png").Permalink }}"/>
+<link rel="apple-touch-icon" sizes="152x152" href="{{ (.Fill "152x152 png").Permalink }}"/>
+<link rel="apple-touch-icon" sizes="180x180" href="{{ (.Fill "180x180 png").Permalink }}"/>
+<link rel="icon" type="image/png" sizes="32x32" href="{{ (.Fill "32x32 png").Permalink }}"/>
+<link rel="icon" type="image/png" sizes="16x16" href="{{ (.Fill "16x16 png").Permalink }}"/>
 {{ end -}}
 
 <!-- Hugo generator tag -->

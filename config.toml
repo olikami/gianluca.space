@@ -13,6 +13,13 @@ removePathAccents=true
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+[menu]
+[[menu.main]]
+  identifier = 'pfadi'
+  title = 'Pfadi'
+  url = 'https://wombat.monster/'
+  weight = 20
+
 [imaging]
 	resampleFilter = "lanczos"
 	quality = 85

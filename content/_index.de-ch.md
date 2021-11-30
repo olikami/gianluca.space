@@ -10,6 +10,7 @@ birthday: 1997-05-19
 menu:
   main:
     title: "Privat"
+    weight: 10
 layout: single
 outputs:
 - html
