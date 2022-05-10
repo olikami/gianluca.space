@@ -4,6 +4,8 @@ date: 2020-02-24T12:34:32+01:00
 phone: "+41 79 884 10 62"
 email: "oliver@kamer.ch"
 author: "Oliver Kamer"
+firstname: "Oliver"
+lastname: "Kamer"
 birthday: 1997-05-19
 layout: single
 outputs:
