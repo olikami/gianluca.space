@@ -19,7 +19,7 @@ resources:
 - name: icon
   src: oli_face.png
 - name: portrait
-  src: Norway_Fjord.JPG
+  src: IMG_2779.jpg
 - name: background
   src: Grindelwald.jpg
 ---
