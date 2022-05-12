@@ -1,24 +1,19 @@
 ---
-title: "Oliver Kamer"
+title: "Gianluca Fischer"
 date: 2020-02-24T12:34:32+01:00
-phone: "+41 79 884 10 62"
-email: "oliver@kamer.ch"
-author: "Oliver Kamer"
-firstname: "Oliver"
-lastname: "Kamer"
-birthday: 1997-05-19
+firstname: "Gianluca"
+lastname: "Fischer"
+email: "gifi2001@gmail.com"
+author: "Gianluca Fischer"
 layout: single
 outputs:
 - html
 - vcf
 resources:
-- name: icon
-  src: oli_face.png
 - name: portrait
-  src: IMG_2779.jpg
+  src: portrait.jpg
 - name: background
-  src: Grindelwald.jpg
+  src: background.jpg
 ---
-Please call me Oli.
 
-Currently studying computer science at UZH.
+Currently doing civil service at [Technische Fachschule Bern](https://www.tfbern.ch/).
