@@ -23,12 +23,6 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 	[languages.de-ch]
     languageName = "Deutsch"
     weight = 1
-    [languages.de-ch.menu]
-			[[languages.de-ch.menu.main]]
-  			identifier = 'pfadi'
-  			title = 'Pfadi'
-  			url = 'https://wombat.monster/'
-  			weight = 20
 	[languages.en]
     languageName = "English"
 		weight = 2
