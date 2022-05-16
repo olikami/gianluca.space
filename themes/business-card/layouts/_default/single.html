@@ -69,6 +69,14 @@
 							{{ .Page.Params.email }}
 						</a>
 					</div>
+					{{ with .Page.Params.linkedin }}
+					<div>
+						<h2>{{ T "linkedin" }}</h2>
+						<a href="{{ . }}">
+							{{ T "my profile" }}
+						</a>
+					</div>
+					{{ end }}
 				</div>
 			</div>
 		</div>

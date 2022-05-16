@@ -3,3 +3,9 @@ other = "E-Mail"
 
 [phone]
 other = "Telefon"
+
+[linkedin]
+other = "LinkedIn"
+
+["my profile"]
+other = "Mein Profil"

@@ -4,6 +4,7 @@ date: 2020-02-24T12:34:32+01:00
 firstname: "Gianluca"
 lastname: "Fischer"
 email: "gifi2001@gmail.com"
+linkedin: "https://www.linkedin.com/in/gianluca-fischer-719a39226/"
 author: "Gianluca Fischer"
 layout: single
 outputs:
@@ -18,4 +19,4 @@ resources:
   src: icon.png
 ---
 
-Currently doing civil service at [Technische Fachschule Bern](https://www.tfbern.ch/).
+I'm a first year mechanical engineering student at [ETH Zürich](https://ethz.ch/en.html).
