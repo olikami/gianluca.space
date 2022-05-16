@@ -14,6 +14,8 @@ resources:
   src: portrait.jpg
 - name: background
   src: background.jpg
+- name: icon
+  src: icon.png
 ---
 
 Currently doing civil service at [Technische Fachschule Bern](https://www.tfbern.ch/).

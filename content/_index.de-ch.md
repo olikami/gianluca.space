@@ -14,6 +14,8 @@ resources:
   src: portrait.jpg
 - name: background
   src: background.jpg
+- name: icon
+  src: icon.png
 ---
 
 Momentan leiste ich Zivildienst an der [Technischen Fachschule Bern](https://www.tfbern.ch/).
