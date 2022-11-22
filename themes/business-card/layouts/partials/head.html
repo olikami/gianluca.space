@@ -40,17 +40,6 @@
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ end }}
 
-<!-- Lazysizes -->
-{{ $lazysizes := resources.Get "lazysizes.js" }}
-
-{{ if hugo.IsProduction }}
-{{ $lazysizes := $lazysizes | minify | fingerprint }}
-<script src="{{ $lazysizes.RelPermalink }}" integrity="{{ $lazysizes.Data.Integrity }}"></script>
-{{ else }}
-{{ $lazysizes := $lazysizes | fingerprint }}
-<script src="{{ $lazysizes.RelPermalink }}"></script>
-{{ end }}
-
 <!-- Icons -->
 {{ $portrait := .Resources.GetMatch "*icon*" }}
 {{ if not $portrait }}{{ $portrait = .Resources.GetMatch "*portrait*" }}{{ end }}

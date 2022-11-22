@@ -56,11 +56,11 @@
 
 		/* Img stuff */
 
-		.cover-img {
+		.cover-img > img {
 			@apply rounded-t-lg w-full max-h-48 object-cover;
 		}
 
-		.portrait-img {
+		.portrait-img > img {
 			@apply rounded-full border-solid border-white dark:border-gray-900 border-2 -mt-16 w-32 h-32;
 		}
 

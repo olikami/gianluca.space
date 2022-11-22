@@ -9,3 +9,6 @@ other = "LinkedIn"
 
 ["my profile"]
 other = "Mein Profil"
+
+[profilepic]
+other = "Profilbild"

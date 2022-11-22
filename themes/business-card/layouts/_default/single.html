@@ -12,39 +12,51 @@
 			{{- end }}
 			{{ $background := .Resources.GetMatch "background" }}
 			{{ with $background }}
-			<noscript>
-				<img src="{{ (.Fill "480x192").RelPermalink }}" class="cover-img">
-			</noscript>
-			<img
-				data-sizes="auto"
-				src="data:image/jpeg;base64,{{ ( .Fill "60x24" ).Content | base64Encode }}"
-				data-srcset="
-				{{- $img := . -}}
-				{{- range (slice 4 8 16 24 32 48) -}}
-				{{ ( ( printf "%dx%d" (mul . 30) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 30 }}w,
-				{{- end -}}"
-				class="cover-img lazyload"
-			>
+			<picture class="cover-img">
+				<source 
+					srcset="
+						{{- $img := . -}}
+						{{- range (slice 4 8 16 24 32 48) -}}
+						{{ ( ( printf "%dx%d webp" (mul . 30) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 30 }}w,
+						{{- end -}}"
+					type="image/webp"
+				/>
+				<source 
+					srcset="
+						{{- $img := . -}}
+						{{- range (slice 4 8 16 24 32 48) -}}
+						{{ ( ( printf "%dx%d" (mul . 30) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 30 }}w,
+						{{- end -}}"
+					type="image/jpeg"
+				/>
+				<img src="{{ (.Fill "480x192").RelPermalink }}" alt="">
+			</picture>
 			{{ end }}
 			{{ $portrait := .Resources.GetMatch "portrait" }}
+			{{ $title := .Page.Title }}
 			{{ with $portrait }}
 			<div class="flex justify-center">
-				<noscript>
+				<picture class="portrait-img">
+					<source 
+						srcset="
+							{{- $img := . -}}
+							{{- range (slice 4 8 16 24 32 48) -}}
+							{{ ( ( printf "%dx%d webp" (mul . 12) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 12 }}w,
+							{{- end -}}"
+						type="image/webp"
+					/>
+					<source 
+						srcset="
+							{{- $img := . -}}
+							{{- range (slice 4 8 16 24 32 48) -}}
+							{{ ( ( printf "%dx%d webp" (mul . 12) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 12 }}w,
+							{{- end -}}"
+						type="image/jpeg"
+					/>
 					<img
-						src="{{ (.Fill "192x192").RelPermalink }}"
-						class="portrait-img"
+						src="{{ (.Fill "192x192").RelPermalink }}" alt="{{ T "profilepic" }} {{ $title }}"
 					>
-				</noscript>
-				<img
-					data-sizes="auto"
-					src="data:image/jpeg;base64,{{ (.Fill "24x24").Content | base64Encode }}"
-					data-srcset="
-					{{- $img := . -}}
-					{{- range (slice 4 8 12 16 24 32 48) -}}
-					{{ ( ( printf "%dx%d" (mul . 12) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 12 }}w,
-					{{- end -}}"
-					class="portrait-img lazyload"
-				>		
+				</picture>	
 			</div>
 			{{ end }}
 			<div class="p-2">
