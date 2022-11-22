@@ -12,3 +12,9 @@ other = "Mein Profil"
 
 [profilepic]
 other = "Profilbild"
+
+[description]
+other = "Die digitale Visitenkarte von {{ .Site.Title }}."
+
+[downloadVCard]
+other = "Kontakt herunterladen"

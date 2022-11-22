@@ -12,3 +12,9 @@ other = "my profile"
 
 [profilepic]
 other = "profile picture"
+
+[description]
+other = "{{ .Site.Title }}'s digital business card."
+
+[downloadVCard]
+other = "download contact"

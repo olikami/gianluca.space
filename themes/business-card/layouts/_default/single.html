@@ -3,7 +3,7 @@
 		<div class="card">
 			{{ with  .OutputFormats.Get "vcf" -}}
 			<div class="icon">
-				<a href="{{ .RelPermalink }}">
+				<a href="{{ .RelPermalink }}" aria-label="{{ T "downloadVCard" }}">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentcolor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 6H5A2 2 0 003 8v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306.0 2.417.835 2.83 2M9 14a3.001 3.001.0 00-2.83 2M15 11h3m-3 4h2"/>
 					</svg>
@@ -16,20 +16,20 @@
 				<source 
 					srcset="
 						{{- $img := . -}}
-						{{- range (slice 4 8 16 24 32 48) -}}
-						{{ ( ( printf "%dx%d webp" (mul . 30) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 30 }}w,
+						{{- range (slice 1 1.5 1.8 2 2.4 2.5 2.75 3 3.5 4) -}}
+						{{ ( ( printf "%dx%d webp" (int (mul . 512)) (int (mul . 192)) ) | $img.Fill ).RelPermalink }} {{ . }}x,
 						{{- end -}}"
 					type="image/webp"
 				/>
 				<source 
 					srcset="
 						{{- $img := . -}}
-						{{- range (slice 4 8 16 24 32 48) -}}
-						{{ ( ( printf "%dx%d" (mul . 30) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 30 }}w,
+						{{- range (slice 1 1.5 1.8 2 2.4 2.5 2.75 3 3.5 4) -}}
+						{{ ( ( printf "%dx%d jpg" (int (mul . 512)) (int (mul . 192)) ) | $img.Fill ).RelPermalink }} {{ . }}x,
 						{{- end -}}"
 					type="image/jpeg"
 				/>
-				<img src="{{ (.Fill "480x192").RelPermalink }}" alt="">
+				<img src="{{ (.Fill "512x192").RelPermalink }}" alt="">
 			</picture>
 			{{ end }}
 			{{ $portrait := .Resources.GetMatch "portrait" }}
@@ -40,16 +40,16 @@
 					<source 
 						srcset="
 							{{- $img := . -}}
-							{{- range (slice 4 8 16 24 32 48) -}}
-							{{ ( ( printf "%dx%d webp" (mul . 12) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 12 }}w,
+							{{- range (slice 1 1.5 1.8 2 2.4 2.5 2.75 3 3.5 4) -}}
+							{{ ( ( printf "%dx%d webp" (int (mul . 192)) (int (mul . 192)) ) | $img.Fill ).RelPermalink }} {{ . }}x,
 							{{- end -}}"
 						type="image/webp"
 					/>
 					<source 
 						srcset="
 							{{- $img := . -}}
-							{{- range (slice 4 8 16 24 32 48) -}}
-							{{ ( ( printf "%dx%d webp" (mul . 12) (mul . 12) ) | $img.Fill ).RelPermalink }} {{ mul . 12 }}w,
+							{{- range (slice 1 1.5 1.8 2 2.4 2.5 2.75 3 3.5 4) -}}
+							{{ ( ( printf "%dx%d jpg" (int (mul . 192)) (int (mul . 192)) ) | $img.Fill ).RelPermalink }} {{ . }}x,
 							{{- end -}}"
 						type="image/jpeg"
 					/>
