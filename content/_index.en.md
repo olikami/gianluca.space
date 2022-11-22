@@ -19,4 +19,4 @@ resources:
   src: icon.png
 ---
 
-I'm a first year mechanical engineering student at [ETH Zürich](https://ethz.ch/en.html).
+I'm a second year mechanical engineering student at [ETH Zürich](https://ethz.ch/en.html).

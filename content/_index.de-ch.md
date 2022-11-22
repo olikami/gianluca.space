@@ -19,4 +19,4 @@ resources:
   src: icon.png
 ---
 
-Ich studieren Maschinenbau im ersten Jahr an der [ETH Zürich](https://ethz.ch/de.html).
+Ich studiere im zweiten Jahr Maschinenbau an der [ETH Zürich](https://ethz.ch/de.html).
