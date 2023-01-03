@@ -2,7 +2,7 @@ baseURL = "https://gianluca.space/"
 languageCode = "de-ch"
 title = "Gianluca Fischer"
 
-theme = "business-card"
+theme = "hugo-business-card"
 
 defaultContentLanguage = "de-ch"
 
