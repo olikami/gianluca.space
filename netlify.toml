@@ -1,7 +1,1 @@
-[build]
-  command = "hugo --gc --minify"
-  publish = "public"
-
-[build.environment]
-  HUGO_VERSION = "0.106.0"
-  NODE_VERSION = "16"
+themes/hugo-business-card/netlify.toml

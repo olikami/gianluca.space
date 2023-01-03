@@ -1,0 +1,3 @@
+[submodule "themes/hugo-business-card"]
+	path = themes/hugo-business-card
+	url = https://github.com/olikami/hugo-business-card.git
