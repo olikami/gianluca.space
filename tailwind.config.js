@@ -1,1 +1,1 @@
-themes/business-card/tailwind.config.js
+themes/hugo-business-card/tailwind.config.js
